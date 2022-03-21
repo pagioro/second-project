@@ -26,6 +26,25 @@ header {
     background-color: aqua;
 }
 
+.button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #1B1A17;
+    background-color: #557B83;
+    color: #EEEEEE;    
+    text-align: center;
+    width: 12%;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;   
+    margin-left: 10px; 
+}
+
+.button:hover {    
+    background-color: #97DBAE;
+    color: #1B1A17;    
+}
+
 /* user area */
 
 .user {
