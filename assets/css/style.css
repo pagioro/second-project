@@ -13,8 +13,27 @@ body {
 
 /* headings */
 
-h2 {    
+header {    
     text-transform: uppercase;
     letter-spacing: 5px;
     color: #1B1A17;
+    background-color: green;
+}
+
+/* game area section */
+
+#game-area {
+    background-color: aqua;
+}
+
+/* user area */
+
+.user {
+    background-color: bisque;
+}
+
+/* computer area */
+
+.computer {
+    background-color: coral;
 }
