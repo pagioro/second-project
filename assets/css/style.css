@@ -25,14 +25,21 @@ header {
 #choice {
     background-color: aqua;
     letter-spacing: 5px;
+    padding: 10px 0 10px;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
-    padding: 10px 0 10px;
+    justify-content: center;
+    align-content: space-between;    
+}
+
+#choice > div > p {
+    padding-bottom: 15px;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .button {
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
     border: 2px solid #1B1A17;
     background-color: #557B83;
@@ -42,7 +49,7 @@ header {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 5px;   
-    margin-left: 10px; 
+    margin-left: 20px; 
 }
 
 .button:hover {    
@@ -52,15 +59,19 @@ header {
 
 /* game area section */
 
+#game-area {
+    display: flex;
+}
+
 /* user area */
 
 .user {
     background-color: bisque;
-    width: 75%;    
+    height: 300px;       
 }
 
 #user-image {
-    width: 50%;
+    height: 300px;
     border-radius: 2%;
 }
 
@@ -68,12 +79,12 @@ header {
 
 .computer {
     background-color: coral;
-    width: 75%;
+    height: 300px;
     
     
 }
 
 #computer-image {
-    width: 50%;
+    height: 300px;
     border-radius: 2%;
 }
