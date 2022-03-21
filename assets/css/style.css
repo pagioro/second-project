@@ -11,7 +11,7 @@ body {
     font-weight: 400;
 }
 
-/* headings */
+/* header */
 
 header {    
     text-transform: uppercase;
@@ -20,10 +20,15 @@ header {
     background-color: green;
 }
 
-/* game area section */
+/* choice section */
 
-#game-area {
+#choice {
     background-color: aqua;
+    letter-spacing: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 10px 0 10px;
 }
 
 .button {
@@ -33,7 +38,7 @@ header {
     background-color: #557B83;
     color: #EEEEEE;    
     text-align: center;
-    width: 12%;
+    width: 150px;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 5px;   
@@ -45,14 +50,30 @@ header {
     color: #1B1A17;    
 }
 
+/* game area section */
+
 /* user area */
 
 .user {
     background-color: bisque;
+    width: 75%;    
+}
+
+#user-image {
+    width: 50%;
+    border-radius: 2%;
 }
 
 /* computer area */
 
 .computer {
     background-color: coral;
+    width: 75%;
+    
+    
+}
+
+#computer-image {
+    width: 50%;
+    border-radius: 2%;
 }
