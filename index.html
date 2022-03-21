@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">    
     <title>Rock, Paper, Scissors</title>
     <header>
         <h2>Rock, Paper, Scissors</h2>
@@ -11,20 +12,20 @@
 </head>
 <body>
     <section>
-    <div>
+    <div id="game-area">
         <p>Make a choice</p>
-        <button>Rock</button>
-        <button>Paper</button>
-        <button>Scissors</button>
+        <button aria-label="Rock">Rock</button>
+        <button aria-label="Paper">Paper</button>
+        <button aria-label="Scissors">Scissors</button>
     </div>
-        <div></div>
-        <div>
-            <h3>Your score: <span>0</span></h3>
-            <img>
+        <div id="messages"></div>
+        <div class = 'user'>
+            <h3 class="scores">Your score: <span id="user-score">0</span></h3>
+            <img id="user-image" alt="Rock Paper Scissors">
         </div>
         <div>
-            <h3>Computer score: <span>0</span></h3>
-            <img>
+            <h3>Computer score: <span id="computer-score">0</span></h3>
+            <img id="computer-image" alt="Rock Paper Scissors">
         </div>
     </section>    
 </body>
