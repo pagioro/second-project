@@ -26,13 +26,14 @@ header {
 
 /* choice section */
 
-#choice {    
-    letter-spacing: 5px;
-    padding: 10px 0 10px;
+#choice {        
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: space-between;    
+    align-items: center;
+    align-content: space-between; 
+    letter-spacing: 5px;
+    padding: 10px 0 10px;   
 }
 
 #choice > div > p {
@@ -117,5 +118,11 @@ footer {
 /* For medium screens size from 480px wide and down */
 
 @media screen and (max-width: 480px) {
+
+}
+
+/* For medium screens size from 320px wide and down */
+
+@media screen and (max-width: 320px) {
 
 }
