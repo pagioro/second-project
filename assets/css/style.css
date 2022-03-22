@@ -61,6 +61,11 @@ header {
     color: #1B1A17;    
 }
 
+.button:active {    
+    background-color: #874356;  
+    color: #EEEEEE;      
+}
+
 /* game area section */
 
 #game-area {
