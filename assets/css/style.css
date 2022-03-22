@@ -9,6 +9,7 @@
 body {
     font-family: 'Patrick Hand', sans-serif;     
     font-weight: 400;
+    background-color: #F6E7D8;
 }
 
 /* header */
@@ -16,14 +17,16 @@ body {
 header {    
     text-transform: uppercase;
     letter-spacing: 5px;
-    color: #1B1A17;
-    background-color: green;
+    color: #1B1A17;    
+    padding: 10px 0 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
 }
 
 /* choice section */
 
-#choice {
-    background-color: aqua;
+#choice {    
     letter-spacing: 5px;
     padding: 10px 0 10px;
     display: flex;
@@ -61,30 +64,58 @@ header {
 
 #game-area {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.scores {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
 }
 
 /* user area */
 
-.user {
-    background-color: bisque;
-    height: 300px;       
+.user {    
+    margin: 25px; 
+    text-align: center;           
 }
 
 #user-image {
-    height: 300px;
+    height: 280px;
     border-radius: 2%;
 }
 
 /* computer area */
 
-.computer {
-    background-color: coral;
-    height: 300px;
-    
-    
+.computer {    
+    margin: 25px;
+    text-align: center;    
 }
 
 #computer-image {
-    height: 300px;
+    height: 280px;
     border-radius: 2%;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;  
+    font-size: 1.5rem;
+    padding: 10px 0 20px;
+    background-color: #1B1A17; 
+    color: #EEEEEE; 
+}
+
+/* For medium screens size from 800px wide and down */
+
+@media screen and (max-width: 800px) {
+
+}
+
+/* For medium screens size from 480px wide and down */
+
+@media screen and (max-width: 480px) {
+
 }
