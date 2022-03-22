@@ -32,8 +32,7 @@ header {
     justify-content: center;
     align-items: center;
     align-content: space-between; 
-    letter-spacing: 5px;
-    padding: 10px 0 10px;   
+    letter-spacing: 5px;     
 }
 
 #choice > div > p {
@@ -53,7 +52,6 @@ header {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 5px;   
-    margin-left: 20px; 
 }
 
 .button:hover {    
@@ -114,20 +112,48 @@ footer {
     color: #EEEEEE; 
 }
 
-/* For medium screens size from 800px wide and down */
+/* For medium screens size from 530px wide and down */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 530px) {
 
-}
+    header {            
+        font-size: 1.2rem;        
+    }
 
-/* For medium screens size from 480px wide and down */
+    #choice > div > p {        
+        font-size: 1.5rem;
+    }
 
-@media screen and (max-width: 480px) {
+    #choice > div {        
+        display: flex;
+        flex-direction: column;  
+        align-items: center;
+    }
 
-}
+    .button {
+        margin-bottom: 5px;
+    }
 
-/* For medium screens size from 320px wide and down */
+    .user {    
+        margin: 5px;                  
+    }
 
-@media screen and (max-width: 320px) {
+    #user-image {
+        height: 200px;
+        border-radius: 2%;
+    }
 
+    .computer {    
+        margin: 5px;                  
+    }
+
+    #computer-image {
+        height: 200px;
+        border-radius: 2%;
+    }
+
+    footer {        
+        font-size: 1.2rem;
+        padding: 10px 0 20px;       
+    }
 }
