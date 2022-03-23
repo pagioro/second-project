@@ -1,12 +1,16 @@
-const getUserChoice = function userInput() {
-  userInput = userInput.tolowercase();
+
+const user = document.getElementsByClassName('button');
+const getUserChoice = function userInput(event) {  
     if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
       return userInput;
     } else {
       console.log('error!');
       }
     }
+    console.log(user);
 
+
+    /*
 function getComputerChoice() {
   const randomNumber = Math.floor(Math.ramdom() * 3);
     switch(randomNumber) {
@@ -59,3 +63,5 @@ function playGame() {
 }
 
 playGame();
+
+*/
