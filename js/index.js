@@ -1,15 +1,16 @@
 
-const user = document.getElementsByClassName('button');
-const getUserChoice = function userInput(event) {  
+let choice = document.getElementsByClassName('button');
+for (let i = 0; i < choice.length; i++) {
+    choice[i].addEventListener('click', userInput);
+}
+
+function userInput(user) { 
+    console.log(user.target.innerHTML) 
     if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
       return userInput;
-    } else {
-      console.log('error!');
-      }
     }
-    console.log(user);
-
-
+  }
+  
     /*
 function getComputerChoice() {
   const randomNumber = Math.floor(Math.ramdom() * 3);
