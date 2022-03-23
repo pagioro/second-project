@@ -25,6 +25,19 @@ function getComputerChoice() {
 
   console.log(getComputerChoice());
 
+
+  let userGame = game();
+  let computerGame = getComputerChoice();
+
+  if ((userGame === 'scissors' && computerGame === 'paper') || (userGame === 'scissors' && computerGame === 'paper') || (userGame === 'paper' && computerGame === 'rock')) {
+    'you won!'
+  } if (userGame === computerGame) {
+    'the game is a tie!'
+  } else {
+    'the computer won!'
+  }
+
+  /*
   
 function winner (userChoice, computerChoice) {
    if (userChoice === computerChoice) {
@@ -55,7 +68,7 @@ if (userChoice === 'scissors') {
   }
 }
 
-/*
+
 
 function playGame() {
     const userChoice = getUserChoice('rock');
