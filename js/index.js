@@ -1,13 +1,13 @@
 
 let choice = document.getElementsByClassName('button');
 for (let i = 0; i < choice.length; i++) {
-    choice[i].addEventListener('click', userInput);
+    choice[i].addEventListener('click', game);
 }
 
-function userInput(user) { 
+function game(userInput) { 
     console.log(user.target.innerHTML) 
-    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
-      return userInput;
+    if (game === 'rock' || game === 'paper' || game === 'scissors') {
+      return game;
     }
   }
   
