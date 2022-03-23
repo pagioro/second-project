@@ -11,21 +11,21 @@ function userInput(user) {
     }
   }
   
-    /*
-function getComputerChoice() {
-  const randomNumber = Math.floor(Math.ramdom() * 3);
+function getComputerChoice() {  
+  let randomNumber = Math.floor(Math.random() * 3);
     switch(randomNumber) {
     case 0:
     return 'rock';
-    break;
     case 1:
     return 'paper';
     case 2:
     return 'scissors';
-    break;
     }
   }
 
+  console.log(getComputerChoice());
+
+  
 function winner (userChoice, computerChoice) {
    if (userChoice === computerChoice) {
      return 'the game is a tie!';
@@ -54,6 +54,8 @@ if (userChoice === 'scissors') {
     }
   }
 }
+
+/*
 
 function playGame() {
     const userChoice = getUserChoice('rock');
