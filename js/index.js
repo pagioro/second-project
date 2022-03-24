@@ -3,34 +3,41 @@ for (let i = 0; i < choice.length; i++) {
   choice[i].addEventListener('click', game);
 }
 
-function game(userInput) {  
-  let userChoice = userInput.target.innerHTML 
-  console.log(userChoice)
+
+function game(userInput) {
+  let userChoice = userInput.target.innerHTML != "" ? userInput.target.innerHTML.toLowerCase() : ""
   
   let computerChoice = getComputerChoice()
-  console.log(computerChoice)
+  console.log(`User ${userChoice} x ${computerChoice} Computer`)
 
   if (userChoice === computerChoice) {
-    'tie'
+   console.log('tie')
+  }else if (userChoice === 'paper') {
+    if (computerChoice === 'rock') {
+      console.log('user won')
+    } else  {
+      console.log('computer won')
     }
-    if (userChoice === 'paper') {
-      if (computerChoice === 'rock') {
-        'user won!'
-      } else if (computerChoice === 'scisor') {
-        'computer won!'
-      }
-        } else if (userChoice === 'rock') {
-            if (computerChoice === 'paper') {
-                'user won!'
-            } else if (computerChoice === 'scissors') {
-                'computer won!'
-            }
-          }
-      }
+  } else if (userChoice === 'rock') {
+    if (computerChoice === 'paper') {
+      console.log('user won')
+    } else  {
+     console.log('computer won')
+    }
+  } else if (userChoice === 'scissors') { 
+    if (computerChoice === 'paper') {
+      console.log('user won')
+    }else {
+      console.log('computer won')
+    }
+  }else{
+   console.log('Error')
+  }
+}
 
-/* return computer choice */  
+/* return computer choice */
 
-function getComputerChoice() {
+function getComputerChoice() { //aqui
   let randomNumber = Math.floor(Math.random() * 3);
   switch (randomNumber) {
     case 0:
@@ -41,6 +48,8 @@ function getComputerChoice() {
       return 'scissors';
   }
 }
+
+// document.getElementById('messages').innerHTML += '<br>Some new content!';
 
 
 
@@ -55,9 +64,6 @@ function getComputerChoice() {
   } else {
     'the computer won!'
   }
-  */
-
-/*
   
 function winner (userChoice, computerChoice) {
    if (userChoice === computerChoice) {
@@ -87,8 +93,6 @@ if (userChoice === 'scissors') {
     }
   }
 }
-
-
 
 function playGame() {
     const userChoice = getUserChoice('rock');
