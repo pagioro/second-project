@@ -8,50 +8,61 @@ for (let i = 0; i < choice.length; i++) {
 
 function updateScore(who) {
   console.log(who)
+  //esse parametro WHO podemos usar para dizer se for usuario ou a maquina quem ganhou - Depois penso se podemos fazer de outro jeito rsrs
+  //Podemos usar aqui 1 para o User e 2 para a maquina 
+
 
   let userScore = document.getElementById('user-score');
   let computerScore = document.getElementById('computer-score');
 
-  if (userScore.target) {
-    console.log(userScore.target)
+  if (userScore) {
+    console.log(userScore)
     userScore.target.innerHTML = who
   }
 }
 
+
 function game(userInput) {
-  let userChoice = userInput.target.innerHTML != "" ? userInput.target.innerHTML.toLowerCase() : ""
-  
+  let userChoice = userInput.target.innerHTML != "" ? userInput.target.innerHTML.toLowerCase() : "" // aqui vc fodeu, nao entendi mas ja vi isso, nao lembro
+
   let computerChoice = getComputerChoice()
   console.log(`User ${userChoice} x ${computerChoice} Computer`)
 
+
   if (userChoice === computerChoice) {
-   console.log('tie')
-  }else if (userChoice === 'paper') {
+    console.log('tie')
+  } else if (userChoice === 'paper') {
     if (computerChoice === 'rock') {
       console.log('user won')
-    } else  {
+      updateScore(1)
+    } else {
       console.log('computer won')
+      updateScore(2)
     }
   } else if (userChoice === 'rock') {
     if (computerChoice === 'paper') {
       console.log('user won')
-    } else  {
-     console.log('computer won')
+      updateScore(1)
+    } else {
+      console.log('computer won')
+      updateScore(2)
     }
-  } else if (userChoice === 'scissors') { 
+  } else if (userChoice === 'scissors') {
     if (computerChoice === 'paper') {
       console.log('user won')
-    }else {
+      updateScore(1)
+    } else {
       console.log('computer won')
+      updateScore(2)
     }
-  }else{
-   console.log('Error')
+  } else {
+    console.log('Error')
   }
 }
 
 /* return computer choice */
 
-function getComputerChoice() { 
+function getComputerChoice() { //aqui
   let randomNumber = Math.floor(Math.random() * 3);
   switch (randomNumber) {
     case 0:
@@ -62,9 +73,6 @@ function getComputerChoice() {
       return 'scissors';
   }
 }
-
-
-
 
 
 
