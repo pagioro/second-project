@@ -3,7 +3,6 @@ for (let i = 0; i < choice.length; i++) {
   choice[i].addEventListener('click', game);
 }
 
-
 function game(userInput) {
   let userChoice = userInput.target.innerHTML != "" ? userInput.target.innerHTML.toLowerCase() : ""
   
@@ -37,7 +36,7 @@ function game(userInput) {
 
 /* return computer choice */
 
-function getComputerChoice() { //aqui
+function getComputerChoice() { 
   let randomNumber = Math.floor(Math.random() * 3);
   switch (randomNumber) {
     case 0:
@@ -49,9 +48,26 @@ function getComputerChoice() { //aqui
   }
 }
 
+let userScore = document.getElementById('user-score').innerHTML;
+let computerScore = document.getElementById('computer-score').innerHTML;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // document.getElementById('messages').innerHTML += '<br>Some new content!';
-
-
 
 /*
   let userGame = game(userInput);
@@ -103,5 +119,4 @@ function playGame() {
 }
 
 playGame();
-
 */
