@@ -1,7 +1,17 @@
+let userScore = 0
+let computerScore = 0
+
 let choice = document.getElementsByClassName('button');
 for (let i = 0; i < choice.length; i++) {
   choice[i].addEventListener('click', game);
 }
+
+function updateScore(who){
+    let userScore = document.getElementById('user-score');
+    let computerScore = document.getElementById('computer-score');
+    
+    console.log(who) 
+  }
 
 function game(userInput) {
   let userChoice = userInput.target.innerHTML != "" ? userInput.target.innerHTML.toLowerCase() : ""
