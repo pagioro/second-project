@@ -6,12 +6,17 @@ for (let i = 0; i < choice.length; i++) {
   choice[i].addEventListener('click', game);
 }
 
-function updateScore(who){
-    let userScore = document.getElementById('user-score');
-    let computerScore = document.getElementById('computer-score');
-    
-    console.log(who) 
+function updateScore(who) {
+  console.log(who)
+
+  let userScore = document.getElementById('user-score');
+  let computerScore = document.getElementById('computer-score');
+
+  if (userScore.target) {
+    console.log(userScore.target)
+    userScore.target.innerHTML = who
   }
+}
 
 function game(userInput) {
   let userChoice = userInput.target.innerHTML != "" ? userInput.target.innerHTML.toLowerCase() : ""
@@ -57,13 +62,6 @@ function getComputerChoice() {
       return 'scissors';
   }
 }
-
-let userScore = document.getElementById('user-score').innerHTML;
-let computerScore = document.getElementById('computer-score').innerHTML;
-
-
-
-
 
 
 
