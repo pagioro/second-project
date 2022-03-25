@@ -1,7 +1,6 @@
-//variaveis fora de funcao que todas as funcoes podem acessar e modificar
 let userScore = 0
 let computerScore = 0
-addGameEventClick() // Chama a funcao que adiciona o event listener nos botoes - Ja quero q ela execute assim q carregar a pagina
+addGameEventClick() 
 
 function addGameEventClick() {
   let choice = document.getElementsByClassName('button');
@@ -10,15 +9,13 @@ function addGameEventClick() {
   }
 }
 
-
 function updateScore(who) {
-  //Podemos usar WHO 1 para o User e 2 para a maquina
 
   console.log(`Who called the function: ${who == 1 ? 'User' : 'Computer'}`)
   let userSpan = document.getElementById('user-score');
   let computerSpan = document.getElementById('computer-score');
 
-  // USER
+  // User
   if (userSpan && who == 1) {
     userScore += 1
     userSpan.textContent = userScore
@@ -30,26 +27,27 @@ function updateScore(who) {
     computerScore += 1
     computerSpan.textContent = computerScore
     console.log(`User Score: ${computerScore}`)
-  }
+  }  
+  showWinMessage(who);     
 }
 
 function updateImageChoice(who, choice) {
   console.log(`Update image: ${choice}`)
 
-  let paperSrc = './assets/images/main-image.webp'
-  let rockSrc = './assets/images/main-image.webp'
-  let scissorsSrc = './assets/images/main-image.webp'
-  let choiceSelected = '' //Variavel que sera usada para guardar o SRC selecionado
+  let paperSrc = './assets/images/paper.png'
+  let rockSrc = './assets/images/rock.png'
+  let scissorsSrc = './assets/images/scissors.png'
+  let choiceSelected = '' 
 
   switch (choice) {
     case 'paper':
       choiceSelected = paperSrc
       break;
     case 'scissors':
-     choiceSelected = scissorsSrc
+      choiceSelected = scissorsSrc
       break;
     case 'rock':
-     choiceSelected = rockSrc
+      choiceSelected = rockSrc
       break;
   }
 
@@ -58,7 +56,6 @@ function updateImageChoice(who, choice) {
     let userImg = document.getElementById('user-image');
     userImg.src = choiceSelected
   }
-
   //Computer
   if (who == 2) {
     let compImg = document.getElementById('computer-image');
@@ -66,19 +63,26 @@ function updateImageChoice(who, choice) {
   }
 }
 
-//Funcao para aparecer a mesnagem de ganhador - Precisa fazer a parte do computer e adicionala na logica do game
 function showWinMessage(who) {
-
   let div = document.getElementById('messages');
-
+  //User
   if (who == 1) {
-    div.innerHTML = 'User WON'
+    div.innerHTML = 'User WON!'
+    console.log(showWinMessage(who))
   }
-
   //Computer
   if (who == 2) {
-    div.innerHTML = 'Computer WON'
+    div.innerHTML = 'Computer WON!'
+    console.log(showWinMessage(who))
   }
+
+  /*
+    tie  
+    if ((who == 2) && (who == 1)) {
+      div.innerHTML = 'tie!'
+      console.log(showWinMessage(who))
+    }
+  */
 }
 
 function game(userInput) {
@@ -88,7 +92,6 @@ function game(userInput) {
   updateImageChoice(2, computerChoice)
 
   console.log(`User ${userChoice} x ${computerChoice} Computer`)
-
 
   if (userChoice === computerChoice) {
     console.log('tie')
@@ -121,8 +124,7 @@ function game(userInput) {
   }
 }
 
-/* return computer choice */
-
+/* Return Computer Choice */
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3);
   switch (randomNumber) {
@@ -135,56 +137,7 @@ function getComputerChoice() {
   }
 }
 
-// document.getElementById('messages').innerHTML += '<br>Some new content!';
 
-/*
-  let userGame = game(userInput);
-  let computerGame = getComputerChoice();
 
-  if ((userGame === 'scissors' && computerGame === 'paper') || (userGame === 'rock' && computerGame === 'scissors') || (userGame === 'paper' && computerGame === 'rock')) {
-    'you won!'
-  } if (userGame === computerGame) {
-    'the game is a tie!'
-  } else {
-    'the computer won!'
-  }
-  
-function winner (userChoice, computerChoice) {
-   if (userChoice === computerChoice) {
-     return 'the game is a tie!';
-   }  
-   if (userChoice === 'rock') {
-     if (computerChoice === 'paper') {
-       return 'the computer won!';
-     } else {
-       return 'you won!';
-     }
-   }
 
-if (userChoice === 'paper') {
-  if (computerChoice === 'scissors') {
-    return 'the computer won!';
-  } else {
-    return 'you won!';
-  }
-}
 
-if (userChoice === 'scissors') {
-  if (computerChoice === 'rock') {
-    return 'the computer won!';
-  } else {
-    return 'you won!';
-    }
-  }
-}
-
-function playGame() {
-    const userChoice = getUserChoice('rock');
-    const computerChoice = getComputerChoice();
-    console.log("User:  " + userChoice);
-    console.log("Computer:  " + computerChoice);
-    console.log(determineWinner(userChoice, computerChoice));
-}
-
-playGame();
-*/
