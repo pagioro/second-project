@@ -26,6 +26,14 @@ header {
 
 /* choice section */
 
+#messages {
+    text-align: center;
+    color: #C74B50;
+    font-weight: 900;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
 #choice {        
     display: flex;
     flex-wrap: wrap;

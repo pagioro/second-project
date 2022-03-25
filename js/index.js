@@ -34,9 +34,9 @@ function updateScore(who) {
 function updateImageChoice(who, choice) {
   console.log(`Update image: ${choice}`)
 
-  let paperSrc = './assets/images/paper.png'
-  let rockSrc = './assets/images/rock.png'
-  let scissorsSrc = './assets/images/scissors.png'
+  let paperSrc = './assets/images/paper.webp'
+  let rockSrc = './assets/images/rock.webp'
+  let scissorsSrc = './assets/images/scissors.webp'
   let choiceSelected = '' 
 
   switch (choice) {
