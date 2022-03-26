@@ -1,7 +1,11 @@
 let userScore = 0
 let computerScore = 0
-addGameEventClick() 
+addGameEventClick()
 
+
+/**
+ * Function that scans html buttons and wait for a user click.
+ */
 function addGameEventClick() {
   let choice = document.getElementsByClassName('button');
   for (let i = 0; i < choice.length; i++) {
@@ -9,6 +13,9 @@ function addGameEventClick() {
   }
 }
 
+/**
+ * Function that will put the values ​​in the score.
+ */
 function updateScore(who) {
 
   console.log(`Who called the function: ${who == 1 ? 'User' : 'Computer'}`)
@@ -31,6 +38,9 @@ function updateScore(who) {
   showWinMessage(who);     
 }
 
+/**
+ * Function that will update the images when the user clicks on the buttons.
+ */
 function updateImageChoice(who, choice) {
   console.log(`Update image: ${choice}`)
 
@@ -63,6 +73,9 @@ function updateImageChoice(who, choice) {
   }
 }
 
+/**
+ * Function that will change the winner's message in the div.
+ */
 function showWinMessage(who) {
   let div = document.getElementById('messages');
   //User
@@ -85,6 +98,9 @@ function showWinMessage(who) {
   */
 }
 
+/**
+ * Function that will compare the choices of the user and the computer.
+ */
 function game(userInput) {
   let userChoice = userInput.target.innerHTML != "" ? userInput.target.innerHTML.toLowerCase() : ""
   updateImageChoice(1, userChoice)
@@ -124,7 +140,9 @@ function game(userInput) {
   }
 }
 
-/* Return Computer Choice */
+/**
+ * Function that return the computer choice
+ */
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3);
   switch (randomNumber) {
