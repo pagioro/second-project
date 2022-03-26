@@ -80,13 +80,11 @@ function showWinMessage(who) {
   let div = document.getElementById('messages');
   //User
   if (who == 1) {
-    div.innerHTML = 'User WON!'
-    console.log(showWinMessage(who))
+    div.innerHTML = 'User WON!'    
   }
   //Computer
   if (who == 2) {
-    div.innerHTML = 'Computer WON!'
-    console.log(showWinMessage(who))
+    div.innerHTML = 'Computer WON!'    
   }
 
   /*
