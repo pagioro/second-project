@@ -18,13 +18,13 @@ Fun and well-known game around the world
 
 ![header name game](docs/screenshots/header.png)
 
-- __The landing page image__
+- __The Game Options__
 
-    - The landing page includes a person holding a mobile device and a laptop, while below, there is another image superimposed with the company name and address. 
+    - The games options include clear instruction in the footer and the choice of buttons: Rock, Paper and Scissors. 
 
-    - This section introduces the user to the phone shop.
+    - These options are interactive, and the user can click to make their choice.
 
-![landing page](docs/screenshots/landing_page.png)
+![game choice](docs/screenshots/choice.png)
 
 - __Repair Section__
 
