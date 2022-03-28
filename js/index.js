@@ -2,7 +2,6 @@ let userScore = 0
 let computerScore = 0
 addGameEventClick()
 
-
 /**
  * Function that scan html buttons and wait for a user click.
  */
@@ -28,7 +27,6 @@ function updateScore(who) {
     userSpan.textContent = userScore
     console.log(`User Score: ${userScore}`)
   }
-
   //Computer
   if (computerSpan && who == 2) {
     computerScore += 1
@@ -78,30 +76,11 @@ function updateImageChoice(who, choice) {
  */
 function showWinMessage(who) {
   let div = document.getElementById('messages');
-  /*
-  //User
   if (who == 1) {
-    div.innerHTML = 'User WON!'    
-  }
-  //Computer
-  if (who == 2) {
-    div.innerHTML = 'Computer WON!'    
-  }
-  */
- 
-  if (who == 1) {
-    div.innerHTML = 'User WON!'    
+    div.innerHTML = 'User WON!'      
   } else if (who == 2) {
     div.innerHTML = 'Computer WON!'    
-  } else {
-    div.innerHTML = 'Tie!'
-  }
-
-  
-  //tie  
- // if ((who == 2) && (who == 1)) {
- //     div.innerHTML = 'tie!'
- //   }  
+  } 
 }
 
 /**
@@ -115,35 +94,37 @@ function game(userInput) {
 
   console.log(`User ${userChoice} x ${computerChoice} Computer`)
 
-  if (userChoice === computerChoice) {
-    console.log('tie')
-  } else if (userChoice === 'paper') {
-    if (computerChoice === 'rock') {
-      console.log('user won')
-      updateScore(1)
-    } else {
-      console.log('computer won')
-      updateScore(2)
-    }
-  } else if (userChoice === 'rock') {
-    if (computerChoice === 'paper') {
-      console.log('user won')
-      updateScore(1)
-    } else {
-      console.log('computer won')
-      updateScore(2)
-    }
-  } else if (userChoice === 'scissors') {
-    if (computerChoice === 'paper') {
-      console.log('user won')
-      updateScore(1)
-    } else {
-      console.log('computer won')
-      updateScore(2)
-    }
+
+if (userChoice === computerChoice) {  
+  let div = document.getElementById('messages')
+  div.innerHTML = 'Tie!'  
+} else if (userChoice === 'paper') {
+  if (computerChoice === 'rock') {
+    console.log('user won')
+    updateScore(1)
   } else {
-    console.log('Error')
+    console.log('computer won')
+    updateScore(2)
   }
+} else if (userChoice === 'rock') {
+  if (computerChoice === 'paper') {
+    console.log('computer won')
+    updateScore(2) 
+  } else {
+    console.log('user won') 
+    updateScore(1) 
+  }
+} else if (userChoice === 'scissors') {
+  if (computerChoice === 'paper') {
+    console.log('user won')
+    updateScore(1)
+  } else {
+    console.log('computer won')
+    updateScore(2)
+  }
+} else {
+  console.log('Error')
+} 
 }
 
 /**
@@ -160,8 +141,3 @@ function getComputerChoice() {
       return 'scissors';
   }
 }
-
-
-
-
-
