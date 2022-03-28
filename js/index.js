@@ -78,6 +78,7 @@ function updateImageChoice(who, choice) {
  */
 function showWinMessage(who) {
   let div = document.getElementById('messages');
+  /*
   //User
   if (who == 1) {
     div.innerHTML = 'User WON!'    
@@ -86,14 +87,21 @@ function showWinMessage(who) {
   if (who == 2) {
     div.innerHTML = 'Computer WON!'    
   }
-
-  /*
-    tie  
-    if ((who == 2) && (who == 1)) {
-      div.innerHTML = 'tie!'
-      console.log(showWinMessage(who))
-    }
   */
+
+  if (who == 1) {
+    div.innerHTML = 'User WON!'    
+  } else if (who == 2) {
+    div.innerHTML = 'Computer WON!'    
+  } else {
+    div.innerHTML = 'Tie!'
+  }
+
+  
+  //tie  
+ // if ((who == 2) && (who == 1)) {
+ //     div.innerHTML = 'tie!'
+ //   }  
 }
 
 /**
