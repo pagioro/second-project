@@ -88,7 +88,7 @@ function showWinMessage(who) {
     div.innerHTML = 'Computer WON!'    
   }
   */
-
+ 
   if (who == 1) {
     div.innerHTML = 'User WON!'    
   } else if (who == 2) {
