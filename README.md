@@ -26,13 +26,17 @@ Fun and well-known game around the world
 
 ![game choice](docs/screenshots/choice.png)
 
-- __Repair Section__
+- __Game results__
 
-    - In the repair section, the user will be able to see all the services that the store has.
+    - If the user chooses an option, the image will change to the one he chooses and randomly, the computer image will also change.
 
-    - The user with this information may decide to contact us.
+    - After the computer randomly chooses one, it will be determined the victory of one of the two.
 
-  ![repair section](docs/screenshots/repair_section.png)
+    - The winner is announced to the user above the options button, and the score is updated for either the user or the computer, depending on who on.
+
+    - The results ans score are clear to the user, making the game easy to play, understand who won and waht the score is.
+
+  ![game results](docs/screenshots/results.png)
 
   - __About Us__
 
