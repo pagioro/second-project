@@ -4,7 +4,7 @@ addGameEventClick()
 
 
 /**
- * Function that scans html buttons and wait for a user click.
+ * Function that scan html buttons and wait for a user click.
  */
 function addGameEventClick() {
   let choice = document.getElementsByClassName('button');
