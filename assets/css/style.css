@@ -43,7 +43,7 @@ header {
     letter-spacing: 5px;     
 }
 
-#choice > div > p {
+#choice > div > h3 {
     padding-bottom: 15px;
     font-size: 2rem;
     text-align: center;
@@ -128,7 +128,7 @@ footer {
         font-size: 1.2rem;        
     }
 
-    #choice > div > p {        
+    #choice > div > h3 {        
         font-size: 1.5rem;
     }
 
