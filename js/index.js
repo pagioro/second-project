@@ -1,12 +1,17 @@
 let userScore = 0
 let computerScore = 0
+const paper = 'paper'
+const rock = 'rock'
+const scissors = 'scissors'
+const user = 'user'
+const computer = 'computer'
 addGameEventClick()
 
 /**
  * Function that scan html buttons and wait for a user click.
  */
 function addGameEventClick() {
-  let choice = document.getElementsByClassName('button');
+  const choice = document.getElementsByClassName('button');
   for (let i = 0; i < choice.length; i++) {
     choice[i].addEventListener('click', game);
   }
@@ -17,56 +22,53 @@ function addGameEventClick() {
  */
 function updateScore(who) {
 
-  console.log(`Who called the function: ${who == 1 ? 'User' : 'Computer'}`)
-  let userSpan = document.getElementById('user-score');
-  let computerSpan = document.getElementById('computer-score');
+  //console.log(`Who called the function: ${who == user ? 'User' : 'Computer'}`)
+  const userSpan = document.getElementById('user-score');
+  const computerSpan = document.getElementById('computer-score');
 
   // User
-  if (userSpan && who == 1) {
+  if (userSpan && who == user) {
     userScore += 1
     userSpan.textContent = userScore
-    console.log(`User Score: ${userScore}`)
-  }
-  //Computer
-  if (computerSpan && who == 2) {
+    //console.log(`User Score: ${userScore}`)
+  }else if (computerSpan && who == computer) {  //Computer
     computerScore += 1
     computerSpan.textContent = computerScore
-    console.log(`User Score: ${computerScore}`)
-  }  
-  showWinMessage(who);     
+    //console.log(`User Score: ${computerScore}`)
+  }
+  
+  showWinMessage(who);
 }
 
 /**
  * Function that will update the images when the user clicks on the buttons.
  */
 function updateImageChoice(who, choice) {
-  console.log(`Update image: ${choice}`)
+  //console.log(`Update image: ${choice}`)
 
-  let paperSrc = './assets/images/paper.webp'
-  let rockSrc = './assets/images/rock.webp'
-  let scissorsSrc = './assets/images/scissors.webp'
-  let choiceSelected = '' 
+  const paperSrc = './assets/images/paper.webp'
+  const rockSrc = './assets/images/rock.webp'
+  const scissorsSrc = './assets/images/scissors.webp'
+  let choiceSelected = ''
 
   switch (choice) {
-    case 'paper':
+    case paper:
       choiceSelected = paperSrc
       break;
-    case 'scissors':
+    case scissors:
       choiceSelected = scissorsSrc
       break;
-    case 'rock':
+    case rock:
       choiceSelected = rockSrc
       break;
   }
 
   //User
-  if (who == 1) {
-    let userImg = document.getElementById('user-image');
+  if (who == user) {
+    const userImg = document.getElementById('user-image');
     userImg.src = choiceSelected
-  }
-  //Computer
-  if (who == 2) {
-    let compImg = document.getElementById('computer-image');
+  } else if (who == computer) { //Computer
+    const compImg = document.getElementById('computer-image');
     compImg.src = choiceSelected
   }
 }
@@ -75,69 +77,69 @@ function updateImageChoice(who, choice) {
  * Function that will change the winner's message in the div.
  */
 function showWinMessage(who) {
-  let div = document.getElementById('messages');
-  if (who == 1) {
-    div.innerHTML = 'User WON!'      
-  } else if (who == 2) {
-    div.innerHTML = 'Computer WON!'    
-  } 
+  const div = document.getElementById('messages');
+  if (who == user) {
+    div.innerHTML = 'User WON!'
+  } else if (who == computer) {
+    div.innerHTML = 'Computer WON!'
+  }
 }
 
 /**
  * Function that will compare the choices of the user and the computer.
  */
 function game(userInput) {
-  let userChoice = userInput.target.innerHTML != "" ? userInput.target.innerHTML.toLowerCase() : ""
-  updateImageChoice(1, userChoice)
-  let computerChoice = getComputerChoice()
-  updateImageChoice(2, computerChoice)
+  const userChoice = userInput.target.innerHTML != "" ? userInput.target.innerHTML.toLowerCase() : ""
+  updateImageChoice(user, userChoice)
+  const computerChoice = getComputerChoice()
+  updateImageChoice(computer, computerChoice)
 
-  console.log(`User ${userChoice} x ${computerChoice} Computer`)
+  //console.log(`User ${userChoice} x ${computerChoice} Computer`)
 
 
-if (userChoice === computerChoice) {  
-  let div = document.getElementById('messages')
-  div.innerHTML = 'Tie!'  
-} else if (userChoice === 'paper') {
-  if (computerChoice === 'rock') {
-    console.log('user won')
-    updateScore(1)
+  if (userChoice === computerChoice) {
+    const div = document.getElementById('messages')
+    div.innerHTML = 'Tie!'
+  } else if (userChoice === paper) {
+    if (computerChoice === rock) {
+      //console.log('user won')
+      updateScore(user)
+    } else {
+      //console.log('computer won')
+      updateScore(computer)
+    }
+  } else if (userChoice === rock) {
+    if (computerChoice === paper) {
+      //console.log('computer won')
+      updateScore(computer)
+    } else {
+      // console.log('user won') 
+      updateScore(user)
+    }
+  } else if (userChoice === scissors) {
+    if (computerChoice === paper) {
+      // console.log('user won')
+      updateScore(user)
+    } else {
+      //console.log('computer won')
+      updateScore(computer)
+    }
   } else {
-    console.log('computer won')
-    updateScore(2)
+    console.log('Error')
   }
-} else if (userChoice === 'rock') {
-  if (computerChoice === 'paper') {
-    console.log('computer won')
-    updateScore(2) 
-  } else {
-    console.log('user won') 
-    updateScore(1) 
-  }
-} else if (userChoice === 'scissors') {
-  if (computerChoice === 'paper') {
-    console.log('user won')
-    updateScore(1)
-  } else {
-    console.log('computer won')
-    updateScore(2)
-  }
-} else {
-  console.log('Error')
-} 
 }
 
 /**
  * Function that return the computer choice
  */
 function getComputerChoice() {
-  let randomNumber = Math.floor(Math.random() * 3);
+  const randomNumber = Math.floor(Math.random() * 3);
   switch (randomNumber) {
     case 0:
-      return 'rock';
+      return rock;
     case 1:
-      return 'paper';
+      return paper;
     case 2:
-      return 'scissors';
+      return scissors;
   }
 }
