@@ -87,20 +87,16 @@ Fun and well-known game around the world
 
     - In the GitHub repository, navigate to the Settings tab In the pages section, go to select branch drop-down menu, select Main Once the Main branch has been selected, a link to the site is provided
 
-    - The live link can be found here - https://pagioro.github.io/first-project/
+    - The live link can be found here - https://pagioro.github.io/second-project/
 
     # Credits
 
     ### content
 
-    - When making my project, I was inspired by the Code Institute love running project and Coders Coffeehouse.
+    - When making my project, I was inspired by the Code Institute Rock, Paper, Scissors project where I use as an example the HTML structure to build my project.
 
     - Font was sourced from Google Fonts https://fonts.google.com/
 
-    - Icons were sourced from Font Awesome https://fontawesome.com/
-
-    - I used cloudconvert and ezgif to minimize the image file sizes https://cloudconvert.com/jpg-to-webp and https://ezgif.com/optiwebp
-
     ### media
 
-    - All pictures were taken from the open source site Pexels https://www.pexels.com/
+    - Pictures were taken from the Google Images.
