@@ -6,7 +6,7 @@ It was made for both adults and children where you will choose one of the three 
 
 Fun and well-known game around the world
 
-![Responsive web site Rock, Paper and Scissors Game screenshot](docs/screenshots/responsive.jpg)
+![Responsive web site Rock, Paper and Scissors Game screenshot](./assets/docs/screenshots/responsive.jpg)
 
 # Features
 
@@ -79,7 +79,7 @@ Fun and well-known game around the world
         - No errors were returned when passing through the official (Jigsaw) validator
 
     ![w3c css validator](./assets/docs/screenshots/w3ccss.png)
-       
+
 
     # Deployment
 
