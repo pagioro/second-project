@@ -6,15 +6,15 @@ It was made for both adults and children where you will choose one of the three 
 
 Fun and well-known game around the world
 
-![Responsive web site Rock, Paper and Scissors Game screenshot](./assets/docs/screenshots/responsive.jpg)
+![Responsive web site Rock, Paper and Scissors Game screenshot](./assets/docs/screenshots/responsive.png)
 
 # Features
 
 ### Existing Features
 
-    - Featured at the top of the page the header shows the game name and has a clearly contrast with the background. 
+   - Featured at the top of the page the header shows the game name and has a clearly contrast with the background.       
 
-    - The header tells the user what game they are playing.
+   - The header tells the user what game they are playing.
 
 ![header name game](./assets/docs/screenshots/header.png)
 
