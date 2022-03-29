@@ -16,7 +16,7 @@ Fun and well-known game around the world
 
     - The header tells the user what game they are playing.
 
-![header name game](docs/screenshots/header.png)
+![header name game](./assets/docs/screenshots/header.png)
 
 - __The Game Options__
 
@@ -24,7 +24,7 @@ Fun and well-known game around the world
 
     - These options are interactive, and the user can click to make their choice.
 
-![game choice](docs/screenshots/choice.png)
+![game choice](./assets/docs/screenshots/choice.png)
 
 - __Game results__
 
@@ -36,13 +36,13 @@ Fun and well-known game around the world
 
     - The results ans score are clear to the user, making the game easy to play, understand who won and waht the score is.
 
-  ![game results](docs/screenshots/results.png)
+  ![game results](./assets/docs/screenshots/results.png)
 
   - __Footer__
 
      - The footer section show the rules to the user.
 
-  ![footer](docs/screenshots/footer.png)
+  ![footer](./assets/docs/screenshots/footer.png)
 
     # Testing
 
@@ -54,7 +54,7 @@ Fun and well-known game around the world
 
     - The colour and fonts are easy to read and accessible by running it through lighthouse in devtools.
 
-    ![accessibility](docs/screenshots/lighthouse.png)
+    ![accessibility](./assets/docs/screenshots/lighthouse.png)
 
     - This project is responsive, and works on all screens using devtools device toolbars.
 
@@ -73,17 +73,13 @@ Fun and well-known game around the world
     - HTML
         - No errors were returned when passing through the official W3C validator
 
-    ![html w3c validator](docs/screenshots/html_w3c_validator.png)
+    ![html w3c validator](./assets/docs/screenshots/w3chtml.png)
 
     - CSS
         - No errors were returned when passing through the official (Jigsaw) validator
 
-    ![w3c css validator](docs/screenshots/w3c_css_validator.png)
-
-    - Acessibility
-        - I confirmed that the colours are easy to read and accessible by running it through lighthouse in devtools
-
-    ![lighthouse](docs/screenshots/lighthouse.png)
+    ![w3c css validator](./assets/docs/screenshots/w3ccss.png)
+       
 
     # Deployment
 
