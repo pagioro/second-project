@@ -38,61 +38,35 @@ Fun and well-known game around the world
 
   ![game results](docs/screenshots/results.png)
 
-  - __About Us__
+  - __Footer__
 
-     - Tell a little story of how the company started.
+     - The footer section show the rules to the user.
 
-  ![about us](docs/screenshots/about_us.png)
-
-  - __Sign up Section__
-
-    - This page will allow the user to subscribe to the store to receive future promotions. The user will be asked to submit their full name and email address.
-
-    ![sign up section](docs/screenshots/sign_up.png)
-
-    - In the future, a text box will be, added so that people can send messages directly to the site, and we will be able to use their emails to capture leads.
-
-- __Contact Section__
-
-    - The contact has two sections, one with the information about the opening times, contact e-mail and address.
-
-    ![contact](docs/screenshots/contact.png)
-
-    - In this section there is a map with the precise location of the store
-
-    ![map](docs/screenshots/map.png)
-
-    - __Footer__
-
-        - Links to social media
-        - Hover feature with a bigger size that matches navigation bar
-        - Directs user to the respective site on a new page
-
-    ![footer](docs/screenshots/footer.png)
+  ![footer](docs/screenshots/footer.png)
 
     # Testing
 
-    - This project is responsive looks good, and functions on all standard screens sizes using the devtools device toolbar.   
+    - I tested the game in different browsers and they all work.   
 
-    - I tested that this page works in different browsers: Chrome, Firefox, Safari.
+    - I tested the game results and are always correct.
 
-    - The navigation, header, services, about us, sign up and contact text are all readable and easy to understand.
+    - The header, instructions, options and footer text are all readable and easy to understand.
 
-    - I have confirmed that the form works with require entries in every field and submit buttom works.
+    - The colour and fonts are easy to read and accessible by running it through lighthouse in devtools.
 
-    # Unfixed Bugs
+    ![accessibility](docs/screenshots/lighthouse.png)
 
-    ### Navigation bar
+    - This project is responsive, and works on all screens using devtools device toolbars.
 
-    - The navigation bar for mobile devices is not perfect. In the future, after acquiring better abilities, I will make these changes.
+    # Unfixed Bugs    
+
+    - No unfixed bugs.
 
     # Fixed Bugs
 
-    - Problem: The site was not responsive, and the images were not acting correctly after scaling the page.
+    - The tie was not appearing and was resolved with the code let div = document.getElementById('messages') div.innerHTML = 'Tie!' in the game function
 
-    - Cause: Using float caused the site to break.
-
-    - Resolution: After using flexbox, the website got much better. 
+    - The images were not showing up, and I forgot to redirect the code to the correct folder.  
 
     ## Validator Testing
 
